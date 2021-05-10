@@ -1,0 +1,39 @@
+<div class="container">
+
+<div class="row" >
+
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
+
+        <h1 class="my-4">Blogs
+            <small>by you, for you</small>
+        </h1>
+
+        <!-- Blog Post -->
+        {{#each posts}}
+
+
+            <div class="card mb-4">
+                <img class="card-img-top" src="{{file}}" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">{{title}}</h2>
+                    <p class="card-text">{{{sanitizedHtml}}}</p>
+                    <a href="/post/{{_id}}" class="btn btn-primary">Read More &rarr;</a>    
+                </div>                
+                <div class="card-footer text-muted">
+                    Posted on {{creationDate}} by
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+
+        {{/each}}
+
+
+    </div>
+
+   
+</div>
+
+</div>
+
+
